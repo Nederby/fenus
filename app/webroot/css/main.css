@@ -1,0 +1,90 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   
+   body{
+	background: url('../img/bg_pattern.jpg');
+   }
+	
+	h2{
+	text-shadow: 0px 1px 1px #4D4D4D;
+	color: #222;
+	font: 30px 'LeagueGothicRegular';
+	}
+	ul.nav li {
+		line-height: 27px;
+	}
+	h3{
+		font-size: 22px;
+		line-height: 28px;
+		font-weight: normal;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	
+	h1{
+	text-shadow: 0px 1px 1px #4D4D4D;
+	color: #222;
+	font: 60px 'LeagueGothicRegular';
+	}
+	
+	b{
+		text-shadow: 0px 1px 1px #4D4D4D;
+		color: #222;
+		font: 20px 'LeagueGothicRegular';
+	}
+	
+	ul.roundabout{
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 42em;
+	height: 24em;
+}
+	.roundabout li {
+		height: 20em;
+		width: 30em;
+		background-color: #ccc;
+		text-align: center;
+		cursor: pointer;
+	}
+	.roundabout li.roundabout-in-focus {
+		cursor: default;
+	}
+	.roundabout li span {
+		display: block;
+		padding-top: 6em;
+	}
+	.roundabout #carbonads-container .carbonad {
+		margin: 0 auto;
+	}
+	
+	@media (max-width: 780px) {
+		.well{
+			width:700px;
+		}
+	}
+
+	#flashMessage.message {
+		font-weight: bold;
+		font-size: 14px;
+		padding: 20px;
+		background-color: #FFFAAA;
+		margin: 0 0 10px 0;
+		color: #000;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+

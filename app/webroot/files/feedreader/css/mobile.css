@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Feed reader ~Jakob Nederby Nielsen
+   ========================================================================== */
+@media (max-width: 1000px) {	
+	.latestNews{
+		height:75px;
+		float:left;
+		width: 100%;
+	}
+	.row{
+		clear:both;
+	}
+	.latestNewsPicture{
+		float:left;
+		margin:5px;
+	}
+	
+	.extra{
+		margin:1px 0 0 0;
+		font-size:11px;
+		color:#696969;
+	}
+	.topNews{
+		margin:5px;
+	}
+	.topNewsPicture{
+		width:400px;
+	}
+}

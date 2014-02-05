@@ -1,0 +1,58 @@
+	/* ==========================================================================
+   Feed reader ~Jakob Nederby Nielsen
+   ========================================================================== */
+   
+	h1,h2,h3{
+		font-family: Arial, Verdana, Sans-Serif;
+	}
+	
+	h1{
+		font-family: Arial, sans-serif;
+		color: #f2f0e2;
+		margin-top: 0;
+		display:inline;
+	}
+	
+	h2{
+		font-size: 20px;
+		display:inline;
+	}
+	
+	h3{
+		display:inline;
+		font-size: 16px;
+		line-height: 13px;
+	}
+	b{
+		color: #f2f0e2;
+		font-family: Arial, sans-serif;
+	}
+	
+	a { 
+		text-decoration: underline;
+		color: #576674;
+	}
+
+	a:hover, a:focus {
+		color: #005580;
+		text-decoration: underline;
+	}
+	a:visited {
+		color: #53a3b7;
+		text-decoration: none;
+	}
+	
+	a img {
+		border: none;
+		text-decoration: none;
+	}
+	header#header {
+		background: #38332D;
+		height: 50px;
+		padding: 10px;
+	}
+	
+	#header-wrap{
+		background: #FCFCFC url('../img/bg-header-wrap-home.png') repeat-x left top;
+		padding: 60px 0 0px 0;
+	}

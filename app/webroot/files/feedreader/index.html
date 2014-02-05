@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Feed reader</title>
+        <meta name="description" content="A simple feed reader for dr.dk news feeds">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/desktop.css">
+		<link rel="stylesheet" href="css/mobile.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools.js"></script>
+		<script type="text/javascript" src="js/lib/handlebars.js"></script>
+		<script type="text/javascript" src="js/lib/feedReader.class.js"></script>
+		<script>
+			window.addEvent('domready', function(){
+				jsonfile = new JsonFeedReader("http://fenus.dk/pages/proxy?url="+encodeURIComponent("http://www.dr.dk/php/drmu/mobildrdk/leproxy2.php?f=news"));
+				jsonfile.fetch();
+			});
+		</script>
+    </head>
+    <body>
+	<div id="body-wrap">
+		<!--[if lt IE 7]>
+	    	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		
+		<header id="header" >
+			<script id="template-header" type="text/x-handlebars-template" >
+			{{#header}}
+				<h1>Aktuelle nyheder fra DR</h1> <b>hentet d. <time datetime="{{FeedUpdateDate}}" >{{humanFeedUpdateDate}}</time> via {{feedType}}</b>
+			{{/header}}
+			</script>
+		</header>
+		<!-- foreach top entry in the feed-->
+		<div id="header-wrap"></div>
+			<div class="row" >
+				<div id="topNews" ></div>
+					<script id="template-topNews" type="text/x-handlebars-template">
+						{{#topNews}}
+						<article class="topNews" >
+							<a target="_blank"  href="{{link}}"><img src="{{imgBig}}" class="topNewsPicture" alt="{{title}}" /></a>
+							<header>
+								<a target="_blank" href="{{link}}"><h2>{{title}}</h2> </a>
+								<p class="extra" >{{category}} <time pubdate datetime="{{pubDate}}" >{{humanDate}}</time> </p>
+							</header>
+						</article>
+						{{/topNews}}
+					</script>
+			</div>
+
+			<!-- foreach of the rest of the news -->
+			<div class="row" >
+				<div id="latestNews">
+					<script id="template-latestNews" type="text/x-handlebars-template">
+					{{#latestNews}}
+						<article class="latestNews"  >
+							<a target="_blank" href="{{link}}">
+								<img class="latestNewsPicture" src="{{img}}" alt="{{title}}" />
+							</a>
+							<header>
+								<a target="_blank"  href="{{link}}"><h3>{{title}}</h3></a>
+								<p class="extra" ><time pubdate datetime="{{pubDate}}" >{{humanDate}}</time> {{category}}</p>
+							</header>
+						</article>
+					{{/latestNews}}
+					</script>
+				</div>
+			</div>
+	</div>
+    </body>
+</html>
+
